@@ -1,36 +1,68 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt">
 <head>
   <meta charset="UTF-8">
-    <title>Marcação de Consultas Médicas</title>
-      <link rel="stylesheet" href="css/estilo.css">
-      </head>
-      <body>
-        <div class="container">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bem-vindo à Clínica</title>
+  <style>
+    body {
+      background-image: url('{% static "img/consultorio.webp" %}');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+      color: white;
+    }
+    .overlay {
+      background: rgba(0, 0, 0, 0.6);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+    }
+    .logo {
+      width: 120px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    .titulo {
+      font-size: 3.5rem;  
+      font-weight: 700;   
+      margin-bottom: 1rem; 
+    }
+    .btn-primary {
+      color: #007bff;
+      border: 2px solid #007bff;
+      background: transparent;
+    }
+    .btn-primary:hover {
+      background: #007bff;
+      color: white;
+    }
 
-            <h2>Aplicativo para Marcação de Consultas Médicas</h2>
-                <p>Cadastre-se e faça a sua marcação de forma simples, rápida e segura.</p>
-
-                    <p><strong>Este site é recomendado para marcações de doenças/sintomas não urgentes, como:</strong></p>
-                        <ul class="doencas">
-                              <li>Dor de cabeça frequente</li>
-                                    <li>Dores musculares leves</li>
-                                          <li>Infecção urinária simples</li>
-                                                <li>Infecção da pel</li>
-                                                      <li>principio de duença pulmonar</li>
-                                                            <li> Marcação para qualquer consolta de estematologia</li>
-                                                                  <li>Alergias leves</li>
-                                                                        <li>Tosse persistente sem febre</li>
-                                                                              <li>Consulta de rotina</li>
-                                                                                    <li>Pressão arterial descontrolada (sem emergência)</li>
-                                                                                          <li>Controle de diabetes</li>
-                                                                                                <li>Consulta oftalmológica</li>
-                                                                                                      <li>Consulta ginecológica</li>
-                                                                                                          </ul>
-
-                                                                                                              <img src="img/logo.png" alt="Logo do App" class="logo">
-
-                                                                                                                  <div class="botoes">
-                                                                                                                        <button onclick="alert('Login com o Google')">Criar conta com o Google</button>
-                                                                                                                              <button onclick="location.href='login.html'">Já tenho uma conta - Iniciar Sessão</button>
-                                                                                                                                  </html>
+    .btn-light {
+      color: white;
+      border: 2px solid white;
+      background: transparent;
+    }
+    .btn-light:hover {
+      background: white;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <img src="img/logo.png" alt="Logo Clínica" class="logo">
+    <div>
+      <h1 class="display-3 fw-bold">Marcação de Consultas Médicas</h1>
+      <p class="lead">Bem-vindo! Faça login ou crie sua conta.</p>
+      <a href="#" class="btn btn-light ">Entrar</a>
+      <a href="#" class="btn btn-primary">Cadastro</a>
+    </div>
+  </div>
+</body>
+</html>

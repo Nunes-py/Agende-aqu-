@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastrar</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f2f6fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 35px;
+      width: 90%;
+      max-width: 380px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      color: #002B5B;
+      font-weight: bold;
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      margin-top: 12px;
+      font-weight: bold;
+      color: #002B5B;
+    }
+
+    select, input {
+      width: 100%;
+      padding: 12px;
+      margin-top: 6px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .phone-group {
+      display: flex;
+      gap: 8px;
+    }
+
+    .phone-group select {
+      width: 35%;
+    }
+
+    .phone-group input {
+      width: 65%;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      margin-top: 18px;
+      padding: 12px;
+      background: #002B5B;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 1rem;
+    }
+
+    .btn:hover {
+      background: #004080;
+    }
+
+    .link {
+      margin-top: 12px;
+      display: block;
+      color: #002B5B;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <h2>Criar Conta</h2>
+
+    <form>
+      <label>Nome Completo</label>
+      <input type="text" placeholder="Seu nome" required>
+
+      <label>Número de Telefone</label>
+      <div class="phone-group">
+        <select required>
+          <option value="+244">🇦🇴 +244</option>
+          <option value="+55">🇧🇷 +55</option>
+          <option value="+351">🇵🇹 +351</option>
+        </select>
+        <input type="tel" placeholder="Digite seu número" required>
+      </div>
+
+      <label>Email</label>
+      <input type="email" placeholder="Digite seu email" required>
+
+      <label>Senha</label>
+      <input type="password" placeholder="Crie uma senha" required>
+
+      <label>Confirmar Senha</label>
+      <input type="password" placeholder="Repita a senha" required>
+
+      <button class="btn">Cadastrar</button>
+    </form>
+
+    <a href="entrar.html" class="link">Já tens conta? Entrar</a>
+  </div>
+</body>
+</html>
